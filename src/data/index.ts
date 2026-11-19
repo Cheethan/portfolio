@@ -1,15 +1,15 @@
 export const profile = {
-  name: "Siddanth Reddy Katipally",
-  short: "Siddanth Reddy",
-  role: "Software Developer",
-  company: "Gridmetry GmbH",
-  location: "India — Remote",
-  email: "siddanth6365@gmail.com",
-  site: "https://siddanth.dev",
-  resume: "/siddanth-reddy-resume.pdf",
+  name: "Cheethan Aadithya Bokkolla",
+  short: "Cheethan Aadithya",
+  role: "Solutions Engineer",
+  company: "Threatcop",
+  location: "India — Noida",
+  email: "cheethan2004@gmail.com",
+  site: "https://google.com",
+  resume: "/cheethan_aadithya_resume.pdf",
   bio: [
-    "I'm a software developer at an startup, building full-stack applications — frontend dashboards and the backend systems behind them.",
-    "Outside work I'm just curious about tech and usually building something with AI.",
+    "I'm a Presales/Solutions Engineer at Threatcop, working on cybersecurity solutions, enterprise PoCs, and email security.",
+    "Outside work, I'm curious about technology and enjoy exploring cybersecurity, experimenting with AI, and building things in my homelab.",
   ],
 } as const;
 
@@ -18,20 +18,14 @@ export const socials = [
   {
     key: "github",
     label: "GitHub",
-    handle: "siddanth-6365",
-    href: "https://github.com/siddanth-6365",
+    handle: "Cheethan",
+    href: "https://github.com/Cheethan",
   },
   {
     key: "linkedin",
     label: "LinkedIn",
-    handle: "siddanth-reddy",
-    href: "https://www.linkedin.com/in/siddanth-reddy/",
-  },
-  {
-    key: "x",
-    label: "X",
-    handle: "Siddanth6365",
-    href: "https://x.com/Siddanth6365",
+    handle: "cheethan-aadithya",
+    href: "https://www.linkedin.com/in/cheethan-aadithya/",
   },
   {
     key: "mail",
@@ -49,46 +43,66 @@ export const experience: {
   roles: Role[];
 }[] = [
   {
-    company: "Gridmetry GmbH",
-    location: "Remote",
+    company: "Threatcop",
+    location: "Noida, India",
     roles: [
       {
-        title: "Software Developer",
-        period: "Jan 2026 — Present",
+        title: "Presales Engineer / Solutions Engineer",
+        period: "Jul 2026 — Present",
         bullets: [
-          "Integrated a new mining site with an external energy-market provider in Go, implementing OAuth authentication, REST polling and acknowledgment flows, and control-plane routing into the production pipeline.",
-          "Built a full-stack bidding platform on a React spreadsheet-style UI and FastAPI services, supporting bid creation, editing, deletion, real-time provider submission, DST and holiday deadline enforcement, deterministic bid identifiers, and scheduled AWS Lambda processing.",
+          "Worked on PoCs for 40+ enterprise customers, troubleshooting email delivery issues and analyzing mail traces.",
+          "Handled SSO integrations, SMTP configurations, Microsoft 365 whitelisting, and email gateway troubleshooting.",
+          "Built a WebRTC based deepfake simulation PoC for Google Meet, Teams, and Zoom, supporting up to 10 concurrent streams and later adopted for production.",
+          "Managed DNS and email authentication records (SPF, DKIM, DMARC) across 20+ domains.",
         ],
       },
       {
-        title: "Software Developer Intern",
-        period: "Jun — Dec 2025",
+        title: "Presales Engineer Intern",
+        period: "Jan 2026 — Jul 2026",
         bullets: [
-          "Developed a client dashboard monitoring mining sites across clients, streaming performance data over SSE and serving cached 15-minute, hourly and daily views through TanStack React Query, interactive data grids and trend charts.",
-          "Automated accounting KPI calculations for sites across multiple time resolutions by ingesting API, email and telemetry data through scheduled AWS Lambda and ECS jobs, with PostgreSQL persistence, CloudWatch alarms and data-consistency checks.",
+          "Worked on customer PoCs and handled technical requirements for enterprise clients.",
+          "Assisted with Microsoft 365 whitelisting, SMTP configurations, email gateways, and Active Directory integrations.",
+          "Built a RAG based system with a team of three to automate the RFP process.",
+        ],
+      },
+    ],
+  },
+  {
+    company: "AmberFlux EdgeAI Pvt Ltd.",
+    location: "Remote",
+    roles: [
+      {
+        title: "Software Engineer Intern",
+        period: "May 2025 — Jul 2025",
+        bullets: [
+          "Integrated the D-ID SDK with a vector database and RAG pipeline for real time AI driven media interactions.",
+          "Built React and TypeScript components for analytics dashboards, data driven interfaces, and WebRTC based video features.",
+          "Implemented WebRTC keep alive handling for connections affected by NAT and firewall timeouts.",
+          "Customized the Zoom Meeting SDK with branded layouts and UI components.",
         ],
       },
     ],
   },
 ];
 
-export const earlier: { company: string; role: string; period: string }[] = [
-  {
-    company: "Maxint, Inc",
-    role: "Backend Developer Intern",
-    period: "Sep 2024 — Jan 2025",
-  },
-  {
-    company: "Nomorede",
-    role: "Full Stack Developer Intern",
-    period: "Jul — Sep 2024",
-  },
-  {
-    company: "ONBO",
-    role: "Frontend Developer Intern",
-    period: "Aug — Dec 2023",
-  },
-];
+// export const earlier: { company: string; role: string; period: string }[] = [
+//   {
+//     company: "Maxint, Inc",
+//     role: "Backend Developer Intern",
+//     period: "Sep 2024 — Jan 2025",
+//   },
+//   {
+//     company: "Nomorede",
+//     role: "Full Stack Developer Intern",
+//     period: "Jul — Sep 2024",
+//   },
+//   {
+//     company: "ONBO",
+//     role: "Frontend Developer Intern",
+//     period: "Aug — Dec 2023",
+//   },
+// ];
+
 
 export const featured: {
   slug: string;
@@ -99,64 +113,47 @@ export const featured: {
   repo: string;
   live?: string;
   video?: string;
+  article?: string;
 }[] = [
   {
-    slug: "attention-router",
-    title: "Attention Router",
-    tagline: "Notification triage that learns what each recipient actually does.",
-    stack: ["Python", "FastAPI", "BM25", "LLMs"],
+    slug: "homelab",
+    title: "Homelab",
+    tagline: "A self-hosted media server built with Linux and Jellyfin.",
+    stack: ["Linux", "CasaOS", "Jellyfin", "ngrok"],
     bullets: [
-      "Classifies messages across three modalities — text, images and voice — into notify, digest or mute, using recipient-specific behavioral history and tiered BM25 retrieval.",
-      "A deterministic safety layer catches phishing, brand impersonation, credential requests and prompt-injection attempts before the language model is ever invoked.",
-      "Production-ready LLM pipeline: schema-validated outputs, citation extraction, retry and fallback handling, provider-pluggable models and offline tests in CI.",
+      "Set up a Linux home server on a 1TB hard disk for self-hosted media and file management.",
+      "Used CasaOS for server administration, file transfers, and service deployment.",
+      "Deployed Jellyfin for media streaming across multiple devices, supporting 7 simultaneous streams.",
+      "Configured remote access using ngrok to access media and personal documents securely outside the local network.",
     ],
-    repo: "https://github.com/siddanth-6365/attention-router",
+    repo: "https://github.com/Cheethan/Homelab",
+    article: "YOUR_MEDIUM_ARTICLE_URL",
   },
   {
-    slug: "vercellite",
-    title: "VercelLite",
-    tagline: "Deploy a React app from a repo URL, the way Vercel does it.",
+    slug: "universal-price-comparison",
+    title: "Universal Product Price Comparison",
+    tagline: "A real-time price comparison platform for discovering the best e-commerce deals.",
     stack: [
-      "Node.js",
-      "Redis Pub/Sub",
-      "Docker",
-      "AWS ECS",
-      "S3",
-      "PostgreSQL",
-      "Prisma",
+      "Python",
+      "Scrapy",
+      "ScraperAPI",
+      "Cheerio",
+      "IP Rotation",
+      "Web Scraping",
     ],
     bullets: [
-      "Builds React applications from GitHub repository URLs inside isolated Docker containers and publishes them on hosted URLs with custom-domain support and request analytics.",
-      "Deployment orchestration on Node.js and AWS ECS, Redis Pub/Sub for real-time build logs, PostgreSQL with Prisma for project and deployment persistence.",
-      "A reverse proxy routes incoming requests to the correct deployed assets in Amazon S3.",
+      "Built a platform to scrape product listings from Amazon, Flipkart, and Croma, comparing prices, ratings, and deals.",
+      "Implemented product bookmarking, price history tracking, and automated price drop alerts.",
+      "Used Scrapy for static websites and ScraperAPI for JavaScript heavy platforms to aggregate product data.",
+      "Applied rate limiting, and custom request headers to improve scraping reliability.",
+      "Optimized search performance with live data retrieval in approximately 15 seconds and instant results for subsequent searches through caching.",
     ],
-    repo: "https://github.com/siddanth-6365/vercelLite",
-    video: "https://www.youtube.com/watch?v=8LnTBE9aGmk",
-  },
-  {
-    slug: "trackit-ai",
-    title: "TrackIt-AI",
-    tagline: "Photograph a receipt, then ask questions about your spending.",
-    stack: ["Python", "Next.js", "Supabase", "OCR", "LLMs"],
-    bullets: [
-      "Turns receipt images into structured expense data through OCR and LLM parsing, with automatic categorization.",
-      "Stores everything in Supabase Postgres and answers natural-language questions about spending via Text-to-SQL.",
-    ],
-    repo: "https://github.com/siddanth-6365/TrackIt-AI",
-    video: "https://www.youtube.com/watch?v=ki9gguv20kc",
-  },
-  {
-    slug: "cctv-ivr",
-    title: "CCTV Intelligent Video Recording",
-    tagline: "Record only the footage worth keeping.",
-    stack: ["Python", "YOLOv8", "OpenCV"],
-    bullets: [
-      "Cuts CCTV storage overhead by recording only activity-rich segments instead of continuous footage.",
-      "Frame subtraction handles cheap motion detection; YOLOv8 object detection confirms significant events before recording starts.",
-    ],
-    repo: "https://github.com/siddanth-6365/Intelligent_Video_Recording_for_CCTV",
+    repo: "https://github.com/Cheethan/Price-Comparison-site",
+    live: "https://price-comparison-site-smoky.vercel.app/",
   },
 ];
+
+
 
 export const otherWork: {
   title: string;
@@ -165,80 +162,94 @@ export const otherWork: {
   live?: string;
 }[] = [
   {
-    title: "gitLite",
-    note: "Git's internals rebuilt from scratch in JavaScript",
-    repo: "https://github.com/siddanth-6365/gitLite",
-  },
-  // {
-  //   title: "pySql",
-  //   note: "Slack bot that answers database questions in plain English",
-  //   repo: "https://github.com/siddanth-6365/pySql",
-  // },
-  {
-    title: "leetcode-stats-api",
-    note: "LeetCode's GraphQL API, wrapped as REST",
-    repo: "https://github.com/siddanth-6365/leetcode-Stats-api",
-    live: "https://leetcode-rest-api.onrender.com",
+    title: "Flipkart Mobile Scraper",
+    note: "An Apify actor for scraping Flipkart mobile product listings.",
+    repo: "https://github.com/Cheethan/flipkart-scraper-mobiles",
   },
   {
-    title: "Jaypee Maps",
-    note: "Campus navigation on graph algorithms, in C++",
-    repo: "https://github.com/siddanth-6365/Jaypee-Maps",
+    title: "Kanban Dashboard",
+    note: "A responsive project management dashboard with dark and light themes.",
+    repo: "https://github.com/Cheethan/Project-Dashboard",
   },
   {
-    title: "Prop-X",
-    note: "Real-estate transactions on Ethereum",
-    repo: "https://github.com/siddanth-6365/Prop-X",
-  },
-  {
-    title: "FrescoGuard",
-    note: "Crop management with ML-backed predictions",
-    repo: "https://github.com/siddanth-6365/FrescoGuard",
+    title: "URL Shortener with Analytics",
+    note: "URL shortening, QR code generation, and click analytics.",
+    repo: "https://github.com/Cheethan/URL-Shortener",
   },
 ];
+
+
 
 export const skillGroups: { label: string; items: string[] }[] = [
   {
     label: "Languages",
-    items: ["Python", "Go", "C/C++", "TypeScript", "JavaScript", "SQL"],
+    items: ["C/C++", "JavaScript", "TypeScript", "SQL"],
   },
   {
-    label: "Backend & AI",
+    label: "Backend & Frameworks",
     items: [
-      "FastAPI",
       "Node.js",
+      "Next.js",
+      "MERN Stack",
       "REST APIs",
+      "Scrapy",
+      "Cheerio",
+      "WebRTC",
       "RAG",
-      "AI Agents",
-      "Prompt Engineering",
-      "Multimodal AI",
-      "LLMs",
     ],
   },
   {
     label: "Frontend",
-    items: ["React", "Next.js", "Tailwind CSS", "TanStack React Query"],
+    items: [
+      "React",
+      "Next.js",
+      "Tailwind CSS",
+      "Shadcn UI",
+    ],
   },
   {
     label: "Databases & Infrastructure",
     items: [
-      "PostgreSQL",
+      "MySQL",
       "MongoDB",
-      "Redis",
-      "Docker",
       "Linux",
-      "AWS ECS",
-      "ECR",
-      "S3",
-      "Lambda",
-      "CloudWatch",
-      "Terraform",
-      "GitHub Actions",
-      "CI/CD",
-      "pytest",
+      "CasaOS",
+      "Docker",
+      "ngrok",
+    ],
+  },
+  {
+    label: "Cybersecurity & Email Security",
+    items: [
+      "SPF",
+      "DKIM",
+      "DMARC",
+      "SMTP",
+      "SSO",
+      "Microsoft O365",
+      "Active Directory",
+      "Metasploit",
+      "Nmap",
+      "Burp Suite",
+      "OSINT",
+    ],
+  },
+  {
+    label: "Developer Tools",
+    items: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Grep",
+      "Debugger",
+      "ScraperAPI",
+      "IP Rotation",
+      "Playwright",
+      "Apify",
     ],
   },
 ];
+
 
 export const education = {
   degree: "B.Tech, Computer Science & Engineering",
@@ -246,13 +257,13 @@ export const education = {
   period: "2022 — 2026",
 };
 
-export const achievements: { title: string; note: string; period: string }[] = [
-  {
-    title: "Code with Cisco 2025 Finalist",
-    note: "Selected among the top 75 of 30,000+ applicants and named one of three project nominees in the code-a-thon.",
-    period: "2025",
-  },
-];
+// export const achievements: { title: string; note: string; period: string }[] = [
+//   {
+//     title: "Code with Cisco 2025 Finalist",
+//     note: "Selected among the top 75 of 30,000+ applicants and named one of three project nominees in the code-a-thon.",
+//     period: "2025",
+//   },
+// ];
 
 export const community: {
   role: string;
@@ -261,15 +272,9 @@ export const community: {
   note: string;
 }[] = [
   {
-    role: "Teaching Assistant",
-    org: "100xDevs Full-Stack Web Development Cohort",
-    period: "Jan — Sep 2024",
-    note: "Resolved technical questions and created learning resources across full-stack topics.",
-  },
-  {
-    role: "Core Team Member",
-    org: "Google Developer Student Club, JIIT Noida",
-    period: "Aug 2023 — Jul 2024",
-    note: "Organized technical events and delivered frontend development workshops.",
+    role: "Social Media Manager",
+    org: "Optica Society, JIIT Noida",
+    period: "Jan - Sep 2023",
+    note: "Managed the society's Instagram presence, creating and publishing posts to engage the student community and promote events and activities.",
   },
 ];

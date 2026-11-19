@@ -59,6 +59,7 @@ export default function Projects() {
               <ExternalLink href={p.repo}>Code</ExternalLink>
               {p.video && <ExternalLink href={p.video}>Demo</ExternalLink>}
               {p.live && <ExternalLink href={p.live}>Live</ExternalLink>}
+              {p.article && <ExternalLink href={p.article}>Article</ExternalLink>}
             </div>
           </article>
         ))}

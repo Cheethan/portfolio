@@ -1,4 +1,4 @@
-import { achievements, community, education } from "@/data";
+import { community, education } from "@/data";
 import Section from "./Section";
 
 export default function Background() {
@@ -15,7 +15,7 @@ export default function Background() {
           <p className="mt-1 text-sm text-fg/60">{education.degree}</p>
         </div>
 
-        {achievements.map((item) => (
+        {/* {achievements.map((item) => (
           <div key={item.title}>
             <div className="flex flex-wrap items-baseline justify-between gap-x-4">
               <h3 className="text-[15px] font-medium">{item.title}</h3>
@@ -25,7 +25,7 @@ export default function Background() {
             </div>
             <p className="mt-1 text-sm leading-relaxed text-fg/60">{item.note}</p>
           </div>
-        ))}
+        ))} */}
 
         <div>
           <h3 className="font-mono text-[11px] uppercase tracking-[0.18em] text-muted">

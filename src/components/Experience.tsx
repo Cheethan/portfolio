@@ -1,4 +1,4 @@
-import { earlier, experience } from "@/data";
+import { experience } from "@/data";
 import Pulse from "./Pulse";
 import Section from "./Section";
 
@@ -41,7 +41,7 @@ export default function Experience() {
         ))}
       </div>
 
-      <h3 className="mt-12 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
+      {/* <h3 className="mt-12 font-mono text-[11px] uppercase tracking-[0.18em] text-muted">
         Earlier
       </h3>
       <ul className="mt-4 divide-y divide-border/60">
@@ -60,7 +60,7 @@ export default function Experience() {
             </span>
           </li>
         ))}
-      </ul>
+      </ul> */}
     </Section>
   );
 }
