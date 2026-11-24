@@ -8,7 +8,7 @@ export default function Footer() {
           © {new Date().getFullYear()} {profile.short}
         </span>
         <a
-          href="https://github.com/siddanth-6365/portfolio"
+          href="https://github.com/cheethan/portfolio"
           target="_blank"
           rel="noreferrer"
           className="transition-colors hover:text-fg"
