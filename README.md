@@ -1,4 +1,3 @@
-# siddanth.dev
 
 Personal site. Next.js App Router, Tailwind, server-rendered — one client
 component (the contact form).
